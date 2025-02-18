@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements Demo</title>
+    <style>
+        /* Styling the main container */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ::before - Adds content before the paragraph */
+        p::before {
+            content: "🔥 ";
+            font-size: 1.5em;
+            color: red;
+        }
+
+        /* ::after - Adds content after the paragraph */
+        p::after {
+            content: " ✨";
+            font-size: 1.5em;
+            color: blue;
+        }
+
+        /* ::first-letter - Styles the first letter of the paragraph */
+        p::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: purple;
+        }
+
+        /* ::first-line - Styles only the first line of the paragraph */
+        p::first-line {
+            font-weight: bold;
+            color: green;
+        }
+
+        /* ::selection - Changes the background and text color when text is selected */
+        p::selection {
+            background: yellow;
+            color: black;
+        }
+
+        /* Styling for visibility */
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Pseudo-elements Demo</h2>
+    
+    <div class="box">
+        <p>
+            This is a paragraph demonstrating various CSS pseudo-elements. Try selecting this text, and you will see a different background color!
+        </p>
+    </div>
+
+</body>
+</html>

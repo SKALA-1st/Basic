@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* ID Selector */
+        #title {
+            background-color: lightblue;
+        }
+
+        /* Class Selector */
+        .yellow {
+            color: yellow;
+        }
+        
+        /* Class Selector */
+        .darkgray {
+            color: darkgray;
+        }
+
+
+        /* Descendant Selector */
+        #main p {
+            color: blue;
+        }
+
+        /* Child Selector */
+        #main > p {
+            color: green;
+        }
+
+        /* Attribute Selector */
+        a[href] {
+            color: darkblue;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            color: blue;
+        }
+
+        /* Pseudo-element Selector */
+        p::first-line {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1> Universal Selector </h1>
+
+    <h1><p>Elemnet Selector</p></h1>
+    <p>Element Selector select every elements that match with the name.</p>
+    
+    <h1 id="title">ID Selector</h1>
+
+    <h1 class="yellow">Class Selector</h1>
+    <p class="darkgray">Class Selector select every elements that match with the class name.</p>
+
+    <div id="main">
+        <h1>Descendant Selector</h1>
+        <p>Descendant Selector select every elements that are descendants of a specified element.</p>
+    </div>
+    
+    <div id="main">
+        <h1>Child Selector</h1>
+        <p>Child Selector select every elements that are direct children of a specified element.</p>
+    </div>
+
+    <!-- a  -->
+    <a href="https://www.google.com">Attribute Selector</a>
+
+    <h1>Pseudo-class Selector</h1>
+    <p>Pseudo-class Selector select elements based on a certain state.</p>
+
+    <h1>Pseudo-element Selector</h1>
+    <p>Pseudo-element Selector select and style a part of an element.</p>
+
+    <a href="https://www.google.com">Pseudo-class Selector</a>
+    <p>When you hover the link, the color will be changed.</p>
+
+</body>
+</html>

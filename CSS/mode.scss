@@ -1,0 +1,35 @@
+$bg-light: white;
+$text-light: black;
+$bg-dark: #121212;
+$text-dark: white;
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.light-mode {
+        background-color: $bg-light;
+        color: $text-light;
+    }
+
+    &.dark-mode {
+        background-color: $bg-dark;
+        color: $text-dark;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.radio-group {
+    margin-top: 15px;
+}

@@ -1,0 +1,55 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Layout Container */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Common Style for Sections */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.main-content, .sidebar {
+    background-color: #e0e0e0; 
+    opacity: 0.4;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Assigning Grid Areas */
+.header { grid-area: header; }
+.main-content { grid-area: main; }
+.sidebar { grid-area: sidebar; }
+.footer { grid-area: footer; }
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 1fr 2fr;
+    }
+}

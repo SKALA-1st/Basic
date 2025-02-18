@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform and Transition Example</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Align elements vertically */
+            align-items: center; /* Center align the items */
+            margin: 50px auto; /* Centering the container */
+        }
+
+
+        .hover-box {
+            width: 150px;
+            height: 150px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .hover-box:hover {
+            background-color: #388E3C; /* Darker green */
+            transform: rotate(10deg);
+        }
+
+        .click-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .click-btn:active {
+            background-color: #0056b3; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Transform and Transition Example</h2>
+        <div class="hover-box">Hover me!</div>
+        <button class="click-btn">Click Me!</button>
+    </div>
+
+</body>
+</html>

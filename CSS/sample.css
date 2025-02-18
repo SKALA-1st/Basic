@@ -1,0 +1,53 @@
+/* Flexbox for First Row */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.insert-box {
+    flex: 1; /* Allows input box to expand */
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Grid for Contents Section */
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* gap: 20px; */
+    grid-template-columns: 1fr; /* Single column, full width */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #bfbdbd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}

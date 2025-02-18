@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크 모드 토글</title>
+    <style>
+        :root {
+            --bg-light: white;
+            --text-light: black;
+            --bg-dark: #121212;
+            --text-dark: white;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        .radio-group {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="container">
+        <h1>다크 모드 토글</h1>
+        <div class="radio-group">
+            <input type="radio" id="light" name="theme" value="light" checked>
+            <label for="light">화이트</label>
+            <input type="radio" id="dark" name="theme" value="dark">
+            <label for="dark">다크</label>
+        </div>
+        <p>라디오 버튼을 선택하여 모드를 변경해보세요!</p>
+    </div>
+    <script>
+        const lightRadio = document.getElementById('light');
+        const darkRadio = document.getElementById('dark');
+        const body = document.body;
+        
+        lightRadio.addEventListener('change', () => {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+        });
+        
+        darkRadio.addEventListener('change', () => {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        });
+    </script>
+</body>
+</html>
