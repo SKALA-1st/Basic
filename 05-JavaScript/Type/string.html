@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = "Hello World";
+        console.log(string); // Hello World
+        console.log(string.length); // 11
+        console.log(string[0]); // H
+        console.log(string[1]); // e
+        console.log(string[2]); // l
+        console.log(string[3]); // l
+        console.log(string[4]); // o
+        console.log(string[5]); // " "
+        console.log(string[6]); // W
+        console.log(string[7]); // o
+        console.log(string[8]); // r
+        console.log(string[9]); // l
+        console.log(string[10]); // d
+        console.log(string[11]); // undefined
+        console.log(string.charAt(0)); // H
+        console.log(string.charAt(1)); // e
+        console.log(string.charAt(2)); // l
+        console.log(string.charAt(3)); // l
+        console.log(string.charAt(4)); // o
+        console.log(string.charAt(5)); // " "
+        console.log(string.charAt(6)); // W
+        console.log(string.charAt(7)); // o
+        console.log(string.charAt(8)); // r
+        console.log(string.charAt(9)); // l
+        console.log(string.charAt(10)); // d
+        console.log(string.charAt(11)); // ""
+
+        // String Methods
+        console.log(string.concat(" Everyone")); // Hello World Everyone
+        console.log(string + " Everyone"); // Hello World Everyone
+        console.log(string + 123); // Hello World123 //concat as string
+        console.log(string + true); // Hello Worldtrue //concat as string
+        console.log(string + false); // Hello Worldfalse
+        console.log(string + null); // Hello Worldnull
+        console.log(string + undefined); // Hello Worldundefined
+        console.log(string + {}); // Hello World[object Object]
+        console.log(string + []); // Hello World
+        console.log(string + [1, 2, 3]); // Hello World1,2,3
+        console.log(string + [1, 2, 3][0]); // Hello World1
+        console.log(string + [1, 2, 3][1]); // Hello World2
+        console.log(string + [1, 2, 3][2]); // Hello World3
+        console.log(string + [1, 2, 3][3]); // Hello Worldundefined
+        console.log(string + [1, 2, 3][4]); // Hello Worldundefined
+
+        // Escape Characters
+        console.log("Hello\nWorld"); // Hello
+                                     // World
+        console.log("Hello\tWorld"); // Hello    World
+        console.log("Hello\\World"); // Hello\World
+        console.log("Hello\"World"); // Hello"World
+        console.log("Hello\'World"); // Hello'World
+        console.log("Hello\bWorld"); // HelloWorld
+        console.log("Hello\rWorld"); // HelloWorld
+        
+        // Template Literals
+        let num1 = 3;
+        let num2 = 8;
+        let result =`${num1} 곱하기 ${num2}은 ${num1 * num2}입니다.`; 
+        console.log(result); // 3 곱하기 8은 24입니다.
+        
+    </script>
+</body>
+</html>

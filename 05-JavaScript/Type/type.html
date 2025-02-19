@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // undefiend와 null
+        let something;
+        console.log(something); // undefined
+
+        let nothing = null;
+        console.log(nothing); // null
+
+        // const는 당연히 오류가 발생한다. 왜냐하면 const는 상수이기 때문에 할당도 해야한다.
+        // const something;
+        // console.log(something); // undefined
+
+        const nothing2 = null;
+        console.log(nothing); // null
+
+        console.log(something == nothing); // true
+        console.log(something === nothing); // false
+        console.log(something == nothing2); // true
+    </script>
+</body>
+</html>

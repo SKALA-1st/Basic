@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Number to String
+        let num = 123;
+        let str = String(num);
+        console.log(str); // 123
+        console.log(typeof str); // string
+
+        // Using toString()
+        let num1 = 123;
+        let str1 = num1.toString();
+        console.log(str1); // 123
+        console.log(typeof str1); // string
+
+        // Using Template Literals
+        let num2 = 123;
+        let str2 = `${num2}`;
+        console.log(str2); // 123
+        console.log(typeof str2); // string
+
+        // String to Number
+        let str3 = "123";
+        let num3 = Number(str3);
+        console.log(num3); // 123
+        console.log(typeof num3); // number
+
+        // Using parseInt()
+        let str4 = "123";
+        let num4 = parseInt(str4);
+        console.log(num4); // 123
+        console.log(typeof num4); // number
+
+        // Using parseFloat()
+        let str5 = "123.45";
+        let num5 = parseFloat(str5);
+        console.log(num5); // 123.45
+        console.log(typeof num5); // number
+
+        // Using Unary Operator
+        let str6 = "123";
+        let num6 = +str6;
+        console.log(num6); // 123
+        console.log(typeof num6); // number
+
+        // Using Number Constructor
+        let str7 = "123";
+        let num7 = new Number(str7);
+        console.log(num7); // [Number: 123]
+        console.log(typeof num7); // object
+
+        // Boolean to Number
+        let bool = true;
+        let num8 = Number(bool);
+        console.log(num8); // 1
+        console.log(typeof num8); // number
+
+        // Boolean to String
+        let bool1 = true;
+        let str8 = String(bool1);
+        console.log(str8); // true
+        console.log(typeof str8); // string
+
+        // Number to Boolean
+        let num9 = 1;
+        let bool5 = Boolean(num9);
+        console.log(bool5); // true
+        console.log(typeof bool5); // boolean
+
+        // String to Boolean
+        let str9 = "true";
+        let bool2 = Boolean(str9);
+        console.log(bool2); // true
+        console.log(typeof bool2); // boolean
+
+        // Using !!
+        let str10 = "true";
+        let bool3 = !!str10;
+        console.log(bool3); // true
+        console.log(typeof bool3); // boolean
+
+        // Using Boolean Constructor
+        let str11 = "true";
+        let bool4 = new Boolean(str11);
+        console.log(bool4); // [Boolean: true]
+        console.log(typeof bool4); // object
+
+        // String to Boolean
+        let str12 = "Hello";
+        let bool6 = Boolean(str12);
+        console.log(bool6); // true
+        console.log(typeof bool6); // boolean
+
+
+
+    </script>
+</body>
+</html>
