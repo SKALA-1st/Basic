@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name"/>
+    <br>
+    <label for="age">Age:</label>
+    <input type="text" id="age" placeholder="Enter your age"/>
+
+    <button onclick="handleSubmit()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        /**
+         * Displays the name and age information.
+         * @param {string} name - The name to display.
+         * @param {number} age - The age to display.
+         */
+        function displayInfo(name, age){
+            const message = name + ' is ' + age + ' years old';
+            console.log(message);
+            document.getElementById('result').textContent = message;
+        }
+
+        /**
+         * Handles the submit button click event.
+         */
+        function handleSubmit(){
+            const name = document.getElementById('name').value.trim();
+            const age = parseInt(document.getElementById('age').value, 10); // Convert age to number
+
+            // If the name is empty or a number, display an alert
+            if (!name || /^\d+$/.test(name)) {
+                alert('Name should be string not number.');
+                return;
+            }
+
+            if (!isNaN(age)) {
+                displayInfo(name, age);
+            } else {
+                alert('Please enter a valid age.');
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -7,11 +7,37 @@
 </head>
 <body>
     <script>
-        // Array Variables
+        // Making Arrays
         let arr1 = [1, 2, 3, 4, 5];
         let arr2 = ['a', 'b', 'c', 'd', 'e'];
-        console.log(arr1, arr2); // [1, 2, 3, 4, 5] ['a', 'b', 'c', 'd', 'e']
+        const arr3 = new Array(3); // 길이가 3인 배열 생성
+        const arr4 = Array.of(1, 2, 3); // 값으로 배열 생성
+        const arr5 = Array.from('hello'); // 문자열을 배열로 변환
+
+        console.log(arr1, arr2, arr3, arr4, arr5); 
+        // [1, 2, 3, 4, 5] ['a', 'b', 'c', 'd', 'e'] [empty x 3] [1, 2, 3] ['h', 'e', 'l', 'l', 'o']
         console.table(arr1); // 테이블로 출력: 인덱스 & Value로 출력
+        
+        // Spread Operator by Type
+        //[ 스프레드 문법 활용 예시1 ]
+        const original = [1, 2, 3];
+        const copy = [...original];
+        console.log(copy); // [1, 2, 3]
+        
+        //[ 스프레드 문법 활용 예시2 ]
+        const arr6 = [1, 2];
+        const arr7 = [3, 4];
+        const merged = [...arr6, ...arr7];
+        console.log(merged); // [1, 2, 3, 4]
+        
+        //[ 스프레드 문법 활용 예시3 ]
+        const str = "hello";
+        const arr8 = [...str];
+        console.log(arr8); // ['h', 'e', 'l', 'l', 'o']
+        //[ 스프레드 문법 활용 예시4 ]
+        const arr9 = [2, 3];
+        const newArr = [1, ...arr9, 4];
+        console.log(newArr); // [1, 2, 3, 4]
 
         // Array Indexing
         console.log(arr1[0]); // 1
@@ -39,10 +65,10 @@
         console.log(arr1.toString()); // 1,2,3
         console.log(arr1.valueOf()); // [1, 2, 3]
 
-        // Array Constants
-        const arr3 = [80,70,90,60];
-        arr3.push(100);
-        console.log(arr3); // [80, 70, 90, 60, 100]
+        // Constant Array
+        const const_array = [80,70,90,60];
+        const_array.push(100);
+        console.log(const_array); // [80, 70, 90, 60, 100]
     </script>
 </body>
 </html>

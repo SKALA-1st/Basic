@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Dynamic Array
+        const fruits = ["apple", "banana", "cherry"];
+        console.log(fruits);
+
+        fruits.length = 5;
+        console.log(fruits);
+
+        // Add an element to the end of an Array
+        fruits.push("date");
+        console.log(fruits);
+
+        // Add an element to the beginning of an Array
+        fruits.unshift("kiwi");
+        console.log(fruits);
+
+        // Remove an element from the end of an Array
+        fruits.pop();
+        console.log(fruits);
+
+        // Remove an element from the beginning of an Array
+        fruits.shift();
+        console.log(fruits);
+
+        // Find the index of an element in the Array
+        console.log(fruits.indexOf("banana"));
+
+        // Remove an element by index position
+        fruits.splice(1, 1);
+        console.log(fruits);
+
+        // Copy an Array
+        let copyFruits = fruits.slice();
+        console.log(copyFruits);
+    </script>
+</body>
+</html>

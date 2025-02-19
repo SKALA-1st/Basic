@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object iteration
+        let obj = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        for (let key in obj) {
+            console.log(key + ": " + obj[key]); //[]를 사용해서 key값을 넣어줘야함 dot notation은 안됨
+        }
+
+        // dot notation X
+        // for (let key in obj) {
+        //     console.log(key + ": " + obj.key); 
+        // }
+
+        // Array iteration
+        let arr = ["apple", "banana", "cherry"];
+
+        for (let i in arr) {
+            console.log(i + ": " + arr[i]);
+        }
+
+        // for...of loop
+        for (let element of arr) {
+            console.log(element);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Funiton declaration 1
+        function greet(name){
+            console.log("Hello, " + name);
+        } 
+        greet("John");
+
+        // Function declaration 2
+        function greet2(name="Guest"){
+            console.log("Hello, " + name);
+        }
+        greet2("Alice");
+        greet2();
+
+        // Function expression
+        const greet3 = function(name){
+            console.log("Hello, " + name);
+        }
+        greet3("Bob");
+
+        // Arrow function
+        const greet4 = (name) => {
+            return "Hello, " + name;
+        }
+        console.log(greet4("Tom"));
+
+    </script>
+</body>
+</html>

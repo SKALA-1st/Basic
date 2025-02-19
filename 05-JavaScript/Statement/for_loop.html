@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for loop
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // Get input from user
+        let input = prompt("Enter values separated by commas:");
+        if (input) {
+            // Split the input into an array
+            let values = input.split(',');
+
+            // Create a div to display the values
+            let displayDiv = document.createElement('div');
+            document.body.appendChild(displayDiv);
+
+            // Use a for loop to iterate over the array and display each value
+            for (let i = 0; i < values.length; i++) {
+                let p = document.createElement('p');
+                p.textContent = values[i].trim();
+                console.log(values[i].trim());
+                displayDiv.appendChild(p);
+                
+                // Break the loop if the value is "banana"
+                if(values[i].trim() === "banana") {
+                    break;
+                }
+            }
+        } else {
+            console.log("No input provided.");
+        }
+
+
+    </script>
+</body>
+</html>
