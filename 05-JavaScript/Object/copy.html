@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create the original person object
+        const person = {
+            name: "John",
+            age: 30,
+            job: "Developer",
+            skills: ["JavaScript", "HTML", "CSS"],
+            shadow: "Black"
+        };
+
+        // Create a copy of the person object without the shadow property
+        const duplicatedPerson = { 
+            ...person, 
+            skills: [...person.skills] 
+        };
+        delete duplicatedPerson.shadow;
+
+        // Remove one skill from the original person
+        duplicatedPerson.skills.pop();
+
+        // Display the objects on the document
+        document.body.innerHTML = `
+            <h2>Original Person</h2>
+            <pre>${JSON.stringify(person, null, 2)}</pre>
+            <h2>Duplicated Person</h2>
+            <pre>${JSON.stringify(duplicatedPerson, null, 2)}</pre>
+        `;
+    </script>
+</body>
+</html>

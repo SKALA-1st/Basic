@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Choose Your Shipping Option</h2>
+    <form id="shippingForm">
+        <!--Name should be same for the radio button-->
+        <label>
+            <input type="radio" name="shipping" value="standard" checked>
+            Standard Shipping (Free)
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="shipping" value="express">
+            Express Shipping ($10)
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="shipping" value="next-day">
+            Next Day Shipping ($20)
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+    <script src="./js/radio.js"></script>
+</body>
+</html>

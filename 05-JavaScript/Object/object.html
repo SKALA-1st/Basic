@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            greet: function(){
+                console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+            }
+        };
+
+        person.greet();
+        // Convert object to JSON string
+        const jsonString = JSON.stringify(person);
+        console.log(jsonString);
+
+        // Convert JSON string back to object
+        const newPerson = JSON.parse(jsonString);
+        console.log(newPerson);
+
+        // Write the content on the document
+        newPerson.greet = person.greet;
+        newPerson.greet();
+
+        // Write the content on the document
+        document.write("Hello, my name is " + newPerson.name + " and I am " + newPerson.age + " years old.");
+    </script>
+</body>
+</html>
